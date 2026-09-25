@@ -10,21 +10,21 @@
 </style>
 </head>
 <body>
-<header class="header no-print"><div class="headin"><a class="brand" href="#" aria-label="Kembali ke atas"><span class="logo">S.</span><span><strong>SIDANG<span style="color:#175cd3">.</span></strong><small>GENERATOR JADWAL SKRIPSI 2026</small></span></a><div class="headright"><span class="pill" id="headerStatus"><span class="dot"></span>Menunggu data</span><span class="pill">28 Sep – 6 Nov 2026</span></div></div></header>
+<header class="header no-print"><div class="headin"><a class="brand" href="#" aria-label="Kembali ke atas"><span class="logo">S.</span><span><strong>SIDANG<span style="color:#175cd3">.</span></strong><small>GENERATOR JADWAL SKRIPSI 2026</small></span></a><div class="headright"><span class="pill" id="headerStatus"><span class="dot"></span>Menunggu data</span><span class="pill">28 Sep – 6 Nov 2026</span><span class="tag ok" title="Ketentuan aktif: 28 Sep sesi 2, Alih Jenjang mulai 7 Okt, Rindang mulai 19 Okt" id="buildVersion">REVISI: ALIH MULAI 7 OKT · RINDANG 19 OKT</span></div></div></header>
 <main class="shell">
-<section class="hero no-print"><div><div class="eyebrow">Penjadwalan otomatis · Tahun 2026</div><h1>Jadwal akurat, tanpa bentrok.</h1><p>Periode ujian, ketersediaan penguji, tanggal wajib, preferensi dosen, dan 14 ruangan diperhitungkan dalam satu generator. <strong>28 September 2026, sesi 1 ditiadakan.</strong></p></div><div class="hero-actions"><button class="btn light" type="button" id="heroGenerate">↗ Buat jadwal otomatis</button><button class="btn outline-light" type="button" id="heroLoad">↻ Muat data terbaru</button></div></section>
+<section class="hero no-print"><div><div class="eyebrow">Penjadwalan otomatis · Tahun 2026</div><h1>Jadwal akurat, tanpa bentrok.</h1><p>Periode ujian, ketersediaan penguji, tanggal wajib, preferensi dosen, dan 14 ruangan diperhitungkan dalam satu generator. <strong>ATURAN MUTLAK: 28 September 2026 sesi 1 KOSONG di semua ruangan. Jadwal pertama yang diperbolehkan: sesi 2, pukul 10.00–11.45.</strong></p></div><div class="hero-actions"><button class="btn light" type="button" id="heroGenerate">↗ Buat jadwal otomatis</button><button class="btn outline-light" type="button" id="heroLoad">↻ Muat data terbaru</button></div></section>
 <section class="grid4 no-print" aria-label="Ringkasan"><div class="stat"><small>Mahasiswa sumber</small><b id="kTotal">—</b><em>Seluruh tahap dan jenis prodi</em></div><div class="stat good"><small>Terjadwal</small><b id="kScheduled">—</b><em>Memenuhi batasan wajib</em></div><div class="stat warn"><small>Belum terjadwal</small><b id="kPending">—</b><em>Dengan alasan yang jelas</em></div><div class="stat"><small>Status pemeriksaan</small><b id="kConflict">—</b><em id="kConflictDetail">Tidak ada jadwal aktif</em></div></section>
 <nav class="tabs no-print" aria-label="Navigasi"><button class="tab active" data-tab="source">01 · Sumber data</button><button class="tab" data-tab="config">02 · Pengaturan & aturan</button><button class="tab" data-tab="result">03 · Hasil jadwal</button></nav>
 <section class="view active" id="view-source">
   <div class="section-title"><div><h2>Sumber data Google Sheets</h2><p>Empat tautan bawaan. Data dibaca langsung saat tombol muat digunakan, tanpa mengubah Sheet asli.</p></div><button class="btn ghost" id="reloadAll">↻ Segarkan keempat sumber</button></div>
   <div id="sourceIssues" class="alert warning hidden" role="status"></div>
   <div id="sourceCards" class="sourcegrid"></div>
-  <div class="alert info"><b>Berhalangan per sesi:</b> pada Sheet berhalangan, tambahkan kolom <b>Mulai Sesi</b> dan <b>Sampai Sesi</b> (opsional). Mengisi hanya <b>Sampai Sesi = 2</b> berarti dosen berhalangan sesi 1–2; sesi 3 dan 4 tetap tersedia. Aturan bisa ditambahkan langsung di menu Pengaturan.</div><div class="alert info">Jika Google membatasi pembacaan lintas situs saat halaman disematkan di Google Sites, gunakan <b>Unduh CSV</b> pada setiap tautan lalu <b>Unggah CSV</b> di kartu terkait. Sumber yang gagal dimuat tidak akan diam-diam diabaikan.</div>
+  <div class="alert warning"><b>JADWAL PALING AWAL:</b> Senin, 28 September 2026 <b>SESI 2 (10.00–11.45)</b>. Sesi 1 <b>ditutup 100% untuk semua mahasiswa, dosen, dan ruang N701–N714</b>. Jika mengimpor jadwal lama yang mengisi sesi 1, sistem akan meminta Anda memperbaikinya.</div><div class="alert info"><b>Pembaruan periode:</b> Mahasiswa Alih Jenjang tahap 1 dijadwalkan mulai <b>7 Oktober 2026</b>. Rindang Titi Sugasti (4131220248) mulai <b>19 Oktober 2026</b> tanpa melanggar batas akhir tahapnya.</div><div class="alert info"><b>Berhalangan per sesi:</b> pada Sheet berhalangan, tambahkan kolom <b>Mulai Sesi</b> dan <b>Sampai Sesi</b> (opsional). Mengisi hanya <b>Sampai Sesi = 2</b> berarti dosen berhalangan sesi 1–2; sesi 3 dan 4 tetap tersedia. Aturan bisa ditambahkan langsung di menu Pengaturan.</div><div class="alert info">Jika Google membatasi pembacaan lintas situs saat halaman disematkan di Google Sites, gunakan <b>Unduh CSV</b> pada setiap tautan lalu <b>Unggah CSV</b> di kartu terkait. Sumber yang gagal dimuat tidak akan diam-diam diabaikan.</div>
   <div class="panel"><div class="section-title"><div><h3 style="margin:0">Jadwal lain / jadwal yang sudah ada <span class="tag">Opsional</span></h3><p>Unggah CSV jadwal lama untuk memesan penguji serta ruangnya, sekaligus mendeteksi bentrok dengan hasil baru.</p></div><label class="btn ghost file-btn">↑ Unggah CSV jadwal lain<input id="existingFile" type="file" accept=".csv,text/csv"></label></div><div class="flex"><span id="existingStatus" class="tag">Belum ada data</span><button id="clearExisting" class="btn tiny danger hidden">Hapus jadwal lain</button></div><details class="mapping hidden" id="existingMapping"><summary>Periksa pemetaan kolom jadwal lain</summary><div id="existingMap" class="mapgrid"></div></details><div class="meta" style="margin-top:8px">Kolom yang dikenali: Tanggal, Sesi/Waktu, Ruangan, Ketua Penguji, Anggota Penguji 1/2, Mahasiswa, NIM. Baris yang tanggal atau waktunya tidak dikenali akan dilaporkan.</div></div>
 </section>
 <section class="view" id="view-config">
  <div class="section-title"><div><h2>Aturan penjadwalan</h2><p>Semua aturan tanggal dan ruangan diterapkan ke semua mahasiswa dalam satu proses.</p></div></div><div id="configIssues" class="alert error hidden" role="alert"></div>
- <div class="panel"><h3>Periode tiap kelompok</h3><div class="rule-grid"><div class="rule-card"><strong>Reguler · Tahap 1</strong><span>28 September – 23 Oktober 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Reguler · Tahap 2</strong><span>2 – 6 November 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Alih Jenjang · Tahap 1</strong><span>5 – 16 Oktober 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Alih Jenjang · Tahap 2</strong><span>2 – 6 November 2026<br>Senin–Jumat</span></div></div><div class="alert warning" style="margin-bottom:0"><b>Semua prodi:</b> Senin, 28 September 2026 <b>sesi 1 (08.00–09.45) tidak ada ujian</b>. Penjadwalan tanggal tersebut dimulai dari <b>sesi 2 pukul 10.00</b>.<br><b>Khusus Prodi ASP:</b> 6 Oktober dan 14 Oktober 2026 tidak boleh digunakan. Larangan tanggal dosen wajib dipatuhi; tanggal wajib dosen adalah batasan keras; tanggal prioritas adalah preferensi.</div></div>
+ <div class="panel"><h3>Periode tiap kelompok</h3><div class="rule-grid"><div class="rule-card"><strong>Reguler · Tahap 1</strong><span>28 September – 23 Oktober 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Reguler · Tahap 2</strong><span>2 – 6 November 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Alih Jenjang · Tahap 1</strong><span>7 – 16 Oktober 2026<br>Senin–Jumat</span></div><div class="rule-card"><strong>Alih Jenjang · Tahap 2</strong><span>2 – 6 November 2026<br>Senin–Jumat</span></div></div><div class="alert warning" style="margin-bottom:0"><b>Semua prodi:</b> Senin, 28 September 2026 <b>sesi 1 (08.00–09.45) tidak ada ujian</b>. Penjadwalan tanggal tersebut dimulai dari <b>sesi 2 pukul 10.00</b>.<br><b>Alih Jenjang:</b> tahap 1 paling awal 7 Oktober 2026 (tahap 2 tetap 2–6 November).<br><b>Khusus Rindang Titi Sugasti (NIM 4131220248):</b> paling awal 19 Oktober 2026. Jika periode kelompoknya berakhir sebelum tanggal itu, mahasiswa ditandai belum terjadwal.<br><b>Khusus Prodi ASP:</b> 6 Oktober dan 14 Oktober 2026 tidak boleh digunakan. Larangan tanggal dosen wajib dipatuhi; tanggal wajib dosen adalah batasan keras; tanggal prioritas adalah preferensi.</div></div>
  <div class="two-col"><div class="panel"><h3>Jam ujian dan kapasitas</h3><div class="tablebox"><table><thead><tr><th>Sesi</th><th>Senin–Kamis</th><th>Jumat</th></tr></thead><tbody><tr><td>1</td><td>08.00–09.45</td><td>07.45–09.30</td></tr><tr><td>2</td><td>10.00–11.45</td><td>09.45–11.30</td></tr><tr><td>3</td><td>13.00–14.45</td><td>13.30–15.15</td></tr><tr><td>4</td><td>15.30–17.15</td><td>—</td></tr></tbody></table></div><p class="meta" style="margin:10px 0 0"><b>28 September: sesi 1 ditiadakan</b> (seluruh ruangan). Ruang N701 sampai N714. Maksimal 3 sesi/dosen/hari diusahakan terlebih dahulu; sesi keempat Senin–Kamis hanya digunakan bila diperlukan.</p></div><div class="panel"><h3>Opsi generator</h3><div class="optionrow"><label for="attempts">Pencarian alternatif <select id="attempts"><option value="3">Cepat · 3 percobaan</option><option value="6" selected>Teliti · 6 percobaan</option><option value="10">Maksimal · 10 percobaan</option></select></label></div><p class="meta" style="margin:12px 0">Percobaan alternatif mencari lebih banyak susunan untuk memenuhi aturan dan mengurangi mahasiswa yang belum terjadwal. Seluruh percobaan tetap memeriksa bentrok.</p><label class="checkrow"><input type="checkbox" id="includeSupervisor"><span>Ikut perhitungkan <b>dosen pembimbing</b> sebagai pihak yang tidak boleh memiliki jadwal bersamaan (jika tersedia di data).</span></label><div style="margin-top:15px"><button class="btn" id="configGenerate">Buat jadwal sekarang →</button></div></div></div>
  <div class="panel"><h3>Kolom tahap atau jenis prodi tidak tersedia?</h3><p class="meta">Atur nilai hanya jika sumber utama memang tidak memiliki informasi tersebut. Jika tidak ditentukan, mahasiswa terkait akan ditandai belum terjadwal.</p><div class="optionrow"><label>Jenis prodi cadangan<select id="defaultKind"><option value="">Wajib ada pada data</option><option value="Reguler">Reguler</option><option value="Alih Jenjang">Alih Jenjang</option></select></label><label>Tahap cadangan<select id="defaultStage"><option value="">Wajib ada pada data</option><option value="1">Tahap 1</option><option value="2">Tahap 2</option></select></label></div></div>
  <div class="panel" id="absencePanel"><div class="section-title"><div><h3 style="margin:0">Atur berhalangan berdasarkan sesi <span class="tag ok">Baru</span></h3><p>Aturan tambahan ini diterapkan bersama CSV Berhalangan tanpa mengubah Google Sheets asli. Bisa berhalangan seharian, sampai sesi tertentu, atau dalam rentang sesi.</p></div><button class="btn ghost tiny" type="button" id="exportAbsences">↓ Ekspor aturan CSV</button></div>
@@ -41,7 +41,7 @@
  <div class="tablebox"><table class="resulttable"><thead><tr><th>No.</th><th>Tanggal</th><th>Sesi / waktu</th><th>Ruang</th><th>Mahasiswa</th><th>Jenis / tahap</th><th>Ketua Penguji</th><th>Anggota 1</th><th>Anggota 2</th><th>Status / keterangan bentrok</th><th class="no-print">Aksi</th></tr></thead><tbody id="resultBody"><tr><td colspan="11" class="empty"><b>Jadwal belum dibuat</b>Data yang belum siap tidak akan dijadwalkan.</td></tr></tbody></table></div>
  <div class="panel" id="pendingPanel" style="margin-top:19px;display:none"><div class="section-title"><div><h3 style="margin:0">Mahasiswa belum terjadwal</h3><p>Baris tidak dipaksa masuk jika ada data kurang lengkap atau jadwal tidak memungkinkan.</p></div><button class="btn ghost tiny no-print" id="exportPending">↓ Ekspor daftar belum terjadwal</button></div><div class="tablebox"><table><thead><tr><th>No.</th><th>Mahasiswa / NIM</th><th>Kelompok</th><th>Tim Penguji</th><th>Alasan</th></tr></thead><tbody id="pendingBody"></tbody></table></div></div>
 </section>
-<div class="footer no-print">SIDANG · Generator Skripsi 2026 · Berjalan di browser · Data CSV tidak dikirim ke server aplikasi</div>
+<div class="footer no-print">SIDANG · Generator Skripsi 2026 · Alih Jenjang mulai 7 Okt · Rindang mulai 19 Okt · 28 September mulai sesi 2 · Data CSV tidak dikirim ke server aplikasi</div>
 </main>
 <div id="editModal" class="modal-backdrop hidden no-print" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><h3 id="modalTitle">Ubah jadwal</h3><p id="modalSubtitle" class="meta"></p><div class="mapgrid"><label class="field">Tanggal<input type="date" id="editDate" min="2026-09-28" max="2026-11-06"></label><label class="field">Sesi<select id="editSession"></select></label><label class="field">Ruangan<select id="editRoom"></select></label></div><p id="editSlotNotice" class="meta" role="status" aria-live="polite" style="margin:9px 0 0"></p><div class="alert warning" style="margin-top:12px">Perubahan manual akan diperiksa. Jika bertabrakan, sistem menampilkan nama mahasiswa dan penguji yang terlibat.</div><div class="actions"><button class="btn ghost" id="editCancel">Batal</button><button class="btn" id="editSave">Simpan & periksa</button></div></div></div>
 <script>
@@ -57,13 +57,41 @@
   const WINDOWS = {
     'Reguler|1': ['2026-09-28', '2026-10-23'],
     'Reguler|2': ['2026-11-02', '2026-11-06'],
-    'Alih Jenjang|1': ['2026-10-05', '2026-10-16'],
+    'Alih Jenjang|1': ['2026-10-07', '2026-10-16'],
     'Alih Jenjang|2': ['2026-11-02', '2026-11-06']
   };
   const ASP_BLACKOUT = new Set(['2026-10-06', '2026-10-14']);
-  // Libur sesi global: tidak boleh ada sidang pada 28 September 2026 sesi 1 (08.00–09.45).
+  // Ketentuan khusus berdasarkan NIM, bukan posisi baris atau ejaan nama.
+  const STUDENT_EARLIEST = Object.freeze({'4131220248':'2026-10-19'});
+  function nimKey(value){return String(value??'').replace(/\D/g,'');}
+  function studentSpecialMinimum(p){return STUDENT_EARLIEST[nimKey(p.nim)] || (normKey(p.name)==='rindang titi sugasti'?'2026-10-19':'');}
+  function studentMinimum(p){const period=WINDOWS[`${p.kind}|${p.stage}`];const custom=studentSpecialMinimum(p);return [period?.[0],custom].filter(Boolean).sort().slice(-1)[0]||'';}
+  function studentDates(p){const earliest=studentMinimum(p);return dateRange(`${p.kind}|${p.stage}`,p.asp).filter(date=>date>=earliest);}
+  function studentDateIssue(p,date){
+    const personal=studentSpecialMinimum(p);
+    if(personal && date<personal)return `Rindang Titi Sugasti (NIM 4131220248) baru dapat dijadwalkan mulai 19 Oktober 2026, bukan ${fmtDate(date)}`;
+    if(p.kind==='Alih Jenjang' && date<'2026-10-07')return `Mahasiswa Alih Jenjang paling awal 7 Oktober 2026, bukan ${fmtDate(date)}`;
+    if(!studentDates(p).includes(date))return `Tanggal ${fmtDate(date)} berada di luar periode ${p.kind} tahap ${p.stage}${p.asp?' atau tanggal terlarang Prodi ASP':''}`;
+    return '';
+  }
+  // BATAS MUTLAK: tanggal/jam pertama yang dapat digunakan semua prodi dan seluruh 14 ruangan.
+  const FIRST_ALLOWED = Object.freeze({date:'2026-09-28',session:2,start:'10:00'});
   const NO_EXAM_SLOTS = new Set(['2026-09-28|1']);
-  function isExamSlotAllowed(date,session){return !NO_EXAM_SLOTS.has(date+'|'+Number(session));}
+  function isExamSlotAllowed(date,session){
+    const d=String(date||''),n=Number(session);
+    return !!validYMD(d) && d>=FIRST_ALLOWED.date &&
+      (d!==FIRST_ALLOWED.date||n>=FIRST_ALLOWED.session) &&
+      !NO_EXAM_SLOTS.has(d+'|'+n) && sessionsFor(d).some(s=>s.no===n);
+  }
+  // Menolak pula data lama yang menamai sesinya salah tetapi mulai sebelum pukul 10.00.
+  function violatesFirstSlot(event){
+    const d=parseDate(event?.date)||String(event?.date||'');
+    if(!validYMD(d))return false;
+    if(d<FIRST_ALLOWED.date)return true;
+    if(d!==FIRST_ALLOWED.date)return false;
+    const n=Number(event?.session),start=parseClock(event?.start);
+    return (n>0&&n<FIRST_ALLOWED.session)||!!(start&&minute(start)<minute(FIRST_ALLOWED.start));
+  }
   const MONTHS = {januari:1,jan:1,january:1,februari:2,feb:2,february:2,maret:3,mar:3,march:3,april:4,apr:4,mei:5,may:5,juni:6,jun:6,june:6,juli:7,jul:7,july:7,agustus:8,agu:8,aug:8,august:8,september:9,sep:9,oktober:10,okt:10,oct:10,october:10,november:11,nov:11,desember:12,des:12,dec:12,december:12};
   const DAYS = {minggu:0,sunday:0,sun:0,ahad:0,senin:1,monday:1,mon:1,selasa:2,tuesday:2,tue:2,rabu:3,wednesday:3,wed:3,kamis:4,thursday:4,thu:4,jumat:5,jumaat:5,friday:5,fri:5,sabtu:6,saturday:6,sat:6};
   function normKey(s) {return String(s ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
@@ -287,7 +315,7 @@
   function parseClock(t){const m=/(\d{1,2})[:.](\d\d)/.exec(String(t||''));return m?String(+m[1]).padStart(2,'0')+':'+m[2]:null;}
   function minute(t){if(!t)return 0;const x=t.split(':').map(Number);return x[0]*60+x[1];}
   function overlap(a,b){return minute(a.start)<minute(b.end)&&minute(b.start)<minute(a.end);}
-  function buildExisting(source,m,resolver){const events=[],warnings=[];
+  function buildExisting(source,m,resolver){const events=[],warnings=[],invalidSlots=[];
     (source.rows||[]).forEach((r,i)=>{
       const rawDate=get(r,m,'date');const date=parseDate(rawDate);const sn=parseSessions(get(r,m,'session'))[0];const session=sessionsFor(date||'2000-01-01').find(s=>s.no===sn);
       const time=get(r,m,'time'),range=time.split(/\s*[-–—]\s*/);
@@ -296,7 +324,10 @@
       const examinerRaw=[get(r,m,'chair'),get(r,m,'member1'),get(r,m,'member2')].filter(Boolean);
       if(!date||!start||!end||minute(start)>=minute(end)){warnings.push(`Jadwal lain baris ${r._row||i+2}: tanggal/waktu tidak terbaca; baris diabaikan.`);return;}
       if(!examinerRaw.length&&!get(r,m,'room'))warnings.push(`Jadwal lain baris ${r._row||i+2}: penguji dan ruang kosong; tidak memblokir slot.`);
-      if(date==='2026-09-28'&&overlap({start,end},{start:'08:00',end:'09:45'}))warnings.push(`Jadwal lain baris ${r._row||i+2}: 28 September 2026 sesi 1 (08.00–09.45) ditiadakan; jadwal lama ini harus dipindahkan.`);
+      if(violatesFirstSlot({date,session:sn||0,start,end})){
+        const msg=`Jadwal lain baris ${r._row||i+2}: 28 September 2026 sesi 1 (08.00–09.45) ditiadakan; jadwal paling awal sesi 2 pukul 10.00. Pindahkan jadwal lama ini sebelum membuat jadwal baru.`;
+        warnings.push(msg);invalidSlots.push(msg);
+      }
       events.push({id:'x'+(i+1),external:true,sourceRow:r._row||i+2,name:get(r,m,'student')||'Jadwal lain #'+(i+1),nim:get(r,m,'nim'),date,session:sn||0,start,end,room:get(r,m,'room').toUpperCase().replace(/\s/g,''),examiners:examinerRaw,keys:[...new Set(examinerRaw.map(x=>resolver.resolve(x)))],status:[],conflicts:[]});
     });
     // Periksa bentrok yang telah ada di CSV eksternal sehingga tidak tersembunyi dari administrator.
@@ -305,12 +336,12 @@
       const same=a.keys.filter(k=>b.keys.includes(k));
       if(same.length||a.room&&a.room===b.room)warnings.push(`Jadwal lain sudah bentrok: ${a.name} dengan ${b.name} pada ${fmtDate(a.date)} (${same.length?'penguji sama '+same.join(', '):'ruang sama '+a.room}).`);
     }
-    return {events,warnings};
+    return {events,warnings,invalidSlots};
   }
   function requiredObligations(required){const list=[],seen=new Set();for(const [key,entries] of required)for(const r of entries)for(const date of r.dates){const k=key+'|'+date;if(!seen.has(k)){seen.add(k);list.push({key,date,raw:r.raw});}}return list;}
   function allCandidates(p,blocked,required,includeSupervisor){const keys=p.examiners.map(normName);if(includeSupervisor&&p.supervisor&&!keys.includes(normName(p.supervisor)))keys.push(normName(p.supervisor));
-    const dates=dateRange(`${p.kind}|${p.stage}`,p.asp);const slots=[];
-    for(const date of dates)for(const ss of schedulableSessions(date))if(keys.every(k=>lecturerAllowed(k,date,ss.no,blocked,required)))slots.push({date,session:ss.no,start:ss.start,end:ss.end});
+    const dates=studentDates(p);const slots=[];
+    for(const date of dates)for(const ss of schedulableSessions(date))if(isExamSlotAllowed(date,ss.no)&&keys.every(k=>lecturerAllowed(k,date,ss.no,blocked,required)))slots.push({date,session:ss.no,start:ss.start,end:ss.end});
     return {keys,slots};
   }
   function seeded(seed){let n=seed>>>0;return function(){n+=0x6D2B79F5;let t=n;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
@@ -321,8 +352,8 @@
     for(const e of events){const p=byId.get(e.id);const daySessions=sessionsFor(e.date);const s=daySessions.find(s=>s.no===+e.session);
       if(!p){flag(e,'Mahasiswa tidak ditemukan dalam data sumber');continue;}
       if(!s||s.start!==e.start||s.end!==e.end)flag(e,'Sesi/waktu tidak sesuai ketentuan hari tersebut');
-      if(!isExamSlotAllowed(e.date,e.session)||(e.date==='2026-09-28'&&overlap(e,{start:'08:00',end:'09:45'})))flag(e,'28 September 2026 sesi 1 (08.00–09.45) ditiadakan untuk semua ujian');
-      if(!dateRange(`${p.kind}|${p.stage}`,p.asp).includes(e.date))flag(e,'Tanggal di luar periode atau tanggal terlarang Prodi ASP');
+      if(!isExamSlotAllowed(e.date,e.session)||violatesFirstSlot(e))flag(e,'28 September 2026 sesi 1 (08.00–09.45) ditiadakan; jadwal paling awal 28 September sesi 2 (10.00–11.45)');
+      const studentIssue=studentDateIssue(p,e.date);if(studentIssue)flag(e,studentIssue);
       if(!ROOMS.includes(e.room))flag(e,'Ruangan harus N701–N714');
       for(const key of e.keys||[])if(!lecturerAllowed(key,e.date,+e.session,blocked,required))flag(e,`Dosen ${e.examiners[(e.keys||[]).indexOf(key)]||key} berhalangan atau di luar tanggal wajib`);
     }
@@ -346,7 +377,10 @@
     const valid=fresh.filter(p=>!existingNim.has(p.nim));
     for(const p of fresh)if(p.nim&&existingNim.has(p.nim))invalid.push({panel:p,reason:'NIM sudah memiliki jadwal dalam CSV jadwal lain'});
     const withSlots=valid.filter(p=>p.slots.length),noSlots=valid.filter(p=>!p.slots.length);
-    noSlots.forEach(p=>invalid.push({panel:p,reason:'Tidak ada tanggal/sesi sesuai periode, larangan, dan tanggal wajib seluruh penguji. Periksa aturan berhalangan dan wajib.'}));
+    noSlots.forEach(p=>{const period=WINDOWS[`${p.kind}|${p.stage}`],personal=studentSpecialMinimum(p);
+      const impossible=personal&&period&&personal>period[1];
+      invalid.push({panel:p,reason:impossible?`Aturan Rindang: paling awal 19 Oktober 2026, tetapi periode ${p.kind} tahap ${p.stage} berakhir ${fmtDate(period[1])}. Perlu penetapan periode baru; jadwal tidak akan dipaksakan.`:'Tidak ada tanggal/sesi sesuai periode, tanggal minimum mahasiswa, larangan, dan tanggal wajib seluruh penguji. Periksa aturan berhalangan dan wajib.'});
+    });
     const freq=new Map();for(const p of withSlots)for(const k of p.keys)freq.set(k,(freq.get(k)||0)+1);
     const byDateReq=new Map();for(const o of obligations){const arr=withSlots.filter(p=>p.keys.includes(o.key)&&p.slots.some(s=>s.date===o.date));byDateReq.set(o.key+'|'+o.date,arr);}
     const obligationWarnings=obligations.filter(o=>!(byDateReq.get(o.key+'|'+o.date)||[]).length).map(o=>`Tanggal wajib ${fmtDate(o.date)} (${o.raw}) tidak dapat dipenuhi: tidak ada mahasiswa dan slot yang cocok dengan semua aturan.`);
@@ -354,6 +388,7 @@
       for(const e of external){if(!dayEvents.has(e.date))dayEvents.set(e.date,[]);dayEvents.get(e.date).push(e);for(const k of new Set(e.keys||[])){const lk=k+'|'+e.date;dayLoad.set(lk,(dayLoad.get(lk)||0)+1);}}
       function list(date){return dayEvents.get(date)||[];}
       function candidate(p,slot,maxPerDay=3,skipId=''){
+        if(!isExamSlotAllowed(slot.date,slot.session)||violatesFirstSlot(slot))return null;
         if(p.keys.some(k=>(dayLoad.get(k+'|'+slot.date)||0)>=maxPerDay))return null;
         const overlapping=list(slot.date).filter(e=>e.id!==skipId&&overlap(slot,e));
         if(overlapping.some(e=>p.keys.some(k=>(e.keys||[]).includes(k))))return null;
@@ -367,7 +402,7 @@
         return {slot,room,score,uncovered,pref};
       }
       function best(p,maxPerDay=3,dateFilter='') {let best=null;for(const s of p.slots){if(dateFilter&&s.date!==dateFilter)continue;const c=candidate(p,s,maxPerDay);if(c&&(!best||c.score>best.score))best=c;}return best;}
-      function add(p,c){const e={id:p.id,name:p.name,nim:p.nim,major:p.major,kind:p.kind,stage:p.stage,asp:p.asp,title:p.title,supervisor:p.supervisor,examiners:p.examiners,keys:p.keys,sourceRow:p.sourceRow,date:c.slot.date,session:c.slot.session,start:c.slot.start,end:c.slot.end,room:c.room};assigned.set(p.id,e);
+      function add(p,c){if(!isExamSlotAllowed(c.slot.date,c.slot.session)||violatesFirstSlot(c.slot))throw Error('Slot terlarang: 28 September 2026 sesi 1. Mulai ujian paling awal sesi 2 pukul 10.00.');const e={id:p.id,name:p.name,nim:p.nim,major:p.major,kind:p.kind,stage:p.stage,asp:p.asp,title:p.title,supervisor:p.supervisor,examiners:p.examiners,keys:p.keys,sourceRow:p.sourceRow,date:c.slot.date,session:c.slot.session,start:c.slot.start,end:c.slot.end,room:c.room};assigned.set(p.id,e);
         if(!dayEvents.has(e.date))dayEvents.set(e.date,[]);dayEvents.get(e.date).push(e);byDay.set(e.date,(byDay.get(e.date)||0)+1);roomUse.set(e.room,(roomUse.get(e.room)||0)+1);
         for(const k of p.keys){const key=k+'|'+e.date;dayLoad.set(key,(dayLoad.get(key)||0)+1);if(obligations.some(o=>o.key===k&&o.date===e.date))reqCount.set(key,(reqCount.get(key)||0)+1);}}
       function del(p){const e=assigned.get(p.id);if(!e)return;assigned.delete(p.id);dayEvents.set(e.date,list(e.date).filter(x=>x.id!==p.id));byDay.set(e.date,(byDay.get(e.date)||0)-1);roomUse.set(e.room,(roomUse.get(e.room)||0)-1);for(const k of p.keys){const key=k+'|'+e.date;dayLoad.set(key,(dayLoad.get(key)||0)-1);if(obligations.some(o=>o.key===k&&o.date===e.date))reqCount.set(key,(reqCount.get(key)||0)-1);}}
@@ -405,13 +440,13 @@
       return {events,assigned,coverage,prefScore,over3,score:events.length*100000+coverage*4000+prefScore*2-over3*150,reqCount};
     }
     let best=null;for(let t=0;t<attempts;t++){const current=trial(1729+t*9973);if(!best||current.score>best.score)best=current;}
-    const events=best.events;const unscheduled=[...invalid,...withSlots.filter(p=>!best.assigned.has(p.id)).map(p=>({panel:p,reason:'Seluruh opsi yang memenuhi aturan telah terpakai oleh jadwal penguji/ruangan atau batas sesi dosen. Coba sesuaikan ketentuan sumber.'}))];
+    const events=best.events; if(events.some(e=>!isExamSlotAllowed(e.date,e.session)||violatesFirstSlot(e)||!!studentDateIssue(e,e.date)))throw Error('Pemeriksaan akhir gagal: ada jadwal melanggar tanggal minimum mahasiswa atau slot terlarang. Tidak ada hasil yang diterbitkan.');const unscheduled=[...invalid,...withSlots.filter(p=>!best.assigned.has(p.id)).map(p=>({panel:p,reason:'Seluruh opsi yang memenuhi aturan telah terpakai oleh jadwal penguji/ruangan atau batas sesi dosen. Coba sesuaikan ketentuan sumber.'}))];
     const unmet=obligations.filter(o=>!(best.reqCount.get(o.key+'|'+o.date)||0)).map(o=>`Kewajiban belum terpenuhi: ${o.raw} pada ${fmtDate(o.date)}.`);
     const audited=statusFor(events,panels,blocked,required,external,{includeSupervisor});
     return {events,unscheduled,warnings:[...obligationWarnings,...unmet],requiredTotal:obligations.length,requiredCovered:best.coverage,preferencePoints:best.prefScore,checks:audited.checks,daily:audited.daily,conflicts:audited.conflicts,attempts};
   }
-  function csvRowsForSchedule(events,checks){return events.map(e=>({'Tanggal':fmtDate(e.date),'Tanggal ISO':e.date,'Sesi':e.session,'Waktu':`${e.start} - ${e.end}`,'Ruangan':e.room,'NIM':e.nim,'Mahasiswa':e.name,'Prodi':e.major,'Jenis Prodi':e.kind,'Tahap':e.stage,'Judul':e.title,'Ketua Penguji':e.examiners[0],'Anggota Penguji 1':e.examiners[1],'Anggota Penguji 2':e.examiners[2],'Status':(checks.get(e.id)||[]).length?'BENTROK':'AMAN','Keterangan Bentrok':(checks.get(e.id)||[]).join(' | ')}));}
-  return {ROOMS,WINDOWS,ASP_BLACKOUT,NO_EXAM_SLOTS,isExamSlotAllowed,schedulableSessions,MONTHS,DAYS,normKey,normName,ymd,isoDay,addDay,fmtDate,expandRange,parseDate,parseDates,parseWeekdays,parseSessions,parseSessionWindow,sessionsFor,dateRange,csvParse,csvExport,inferHeader,ruleDateText,kindOf,stageOf,makeAliasResolver,buildPanels,buildRules,buildExisting,requiredObligations,lecturerAllowed,allCandidates,preferenceScore,minute,overlap,statusFor,generate,csvRowsForSchedule};
+  function csvRowsForSchedule(events,checks){if(events.some(e=>!isExamSlotAllowed(e.date,e.session)||violatesFirstSlot(e)||!!studentDateIssue(e,e.date)))throw Error('Ekspor dibatalkan: ditemukan jadwal melanggar tanggal minimum mahasiswa, periode ujian, atau slot pertama.');return events.map(e=>({'Tanggal':fmtDate(e.date),'Tanggal ISO':e.date,'Sesi':e.session,'Waktu':`${e.start} - ${e.end}`,'Ruangan':e.room,'NIM':e.nim,'Mahasiswa':e.name,'Prodi':e.major,'Jenis Prodi':e.kind,'Tahap':e.stage,'Judul':e.title,'Ketua Penguji':e.examiners[0],'Anggota Penguji 1':e.examiners[1],'Anggota Penguji 2':e.examiners[2],'Status':(checks.get(e.id)||[]).length?'BENTROK':'AMAN','Keterangan Bentrok':(checks.get(e.id)||[]).join(' | ')}));}
+  return {ROOMS,WINDOWS,ASP_BLACKOUT,STUDENT_EARLIEST,nimKey,studentSpecialMinimum,studentMinimum,studentDates,studentDateIssue,FIRST_ALLOWED,NO_EXAM_SLOTS,isExamSlotAllowed,violatesFirstSlot,schedulableSessions,MONTHS,DAYS,normKey,normName,ymd,isoDay,addDay,fmtDate,expandRange,parseDate,parseDates,parseWeekdays,parseSessions,parseSessionWindow,sessionsFor,dateRange,csvParse,csvExport,inferHeader,ruleDateText,kindOf,stageOf,makeAliasResolver,buildPanels,buildRules,buildExisting,requiredObligations,lecturerAllowed,allCandidates,preferenceScore,minute,overlap,statusFor,generate,csvRowsForSchedule};
 });
 
 </script>
@@ -528,7 +563,13 @@ function diagnose(){
    for(const [key,entries] of extra.rules){if(!rules.blocked)rules.blocked=new Map();if(!rules.blocked.has(key))rules.blocked.set(key,[]);rules.blocked.get(key).push(...entries);}
    for(const raw of extra.foreign.keys())unmatchedHard.set(raw,'Aturan tambahan berhalangan');
  }
- let external=[];if(state.sources.existing?.rows){const e=C.buildExisting(state.sources.existing,state.mapping.existing||{},resolver);external=e.events;warnings.push(...e.warnings);}
+ let external=[];if(state.sources.existing?.rows){const e=C.buildExisting(state.sources.existing,state.mapping.existing||{},resolver);external=e.events;warnings.push(...e.warnings);for(const msg of e.invalidSlots||[])hard.push('PERBAIKI JADWAL LAMA: '+msg);
+   const panelByNim=new Map(b.panels.filter(p=>C.nimKey(p.nim)).map(p=>[C.nimKey(p.nim),p]));
+   const panelByName=new Map(b.panels.filter(p=>p.name).map(p=>[C.normKey(p.name),p]));
+   for(const ext of external){const p=panelByNim.get(C.nimKey(ext.nim))||(!ext.nim?panelByName.get(C.normKey(ext.name)):null);
+     if(p){const issue=C.studentDateIssue(p,ext.date);if(issue){const msg=`CSV jadwal lain baris ${ext.sourceRow}: ${issue}. Pindahkan jadwal lama sebelum membuat jadwal baru.`;add('panels',msg,true);$('existingMapping').open=true;}}
+   }
+   if(e.invalidSlots?.length)$('existingMapping').open=true;}
  state.panels=b.panels;state.rules=rules;state.external=external;renderAbsenceLecturers();
  const invalid=b.panels.filter(p=>p.errors.length);
  if(invalid.length)warnings.unshift(`${invalid.length} dari ${b.panels.length} mahasiswa memiliki kolom kosong atau data tidak valid dan akan dimasukkan ke daftar belum terjadwal.`);
@@ -556,12 +597,15 @@ function audit(){if(!state.result)return;const res=state.result;const a=C.status
  const obligations=C.requiredObligations(state.rules.required);res.requiredCovered=obligations.filter(o=>res.events.some(e=>e.date===o.date&&e.keys.includes(o.key))).length;
  res.warnings=obligations.filter(o=>!res.events.some(e=>e.date===o.date&&e.keys.includes(o.key))).map(o=>`Kewajiban tanggal belum terpenuhi: ${o.raw} pada ${C.fmtDate(o.date)}.`);
  renderStats();renderResult();}
+function outputSlotSafe(){if(!state.result)return false;const panelByNim=new Map(state.panels.filter(p=>C.nimKey(p.nim)).map(p=>[C.nimKey(p.nim),p]));
+ const bad=[...state.result.events,...state.external].filter(e=>{const p=state.panels.find(x=>x.id===e.id)||panelByNim.get(C.nimKey(e.nim))||(!e.external?e:null);return C.violatesFirstSlot(e)||!!(p&&C.studentDateIssue(p,e.date));});
+ if(bad.length){pop('error',`DIBATALKAN: ${bad.length} jadwal melanggar batas awal, periode mahasiswa, atau larangan sesi pertama. Perbaiki terlebih dahulu.`);return false;}return true;}
 function runGenerate(){const issues=diagnose();if(!SOURCES.every(s=>state.sources[s.id]?.rows)){showTab('source');$('sourceIssues').className='alert error';$('sourceIssues').textContent='Keempat sumber belum lengkap. Klik Muat langsung atau Unggah CSV pada kartu yang gagal.';$('sourceIssues').scrollIntoView({behavior:'smooth'});return;}
  if(issues?.blocking.length){showTab('config');$('configIssues').scrollIntoView({behavior:'smooth',block:'start'});return;}
  if(!state.panels.length){showTab('source');alert('Data mahasiswa kosong.');return;}
  const buttons=['heroGenerate','configGenerate'];buttons.forEach(id=>{$(id).disabled=true;$(id).textContent='Memproses…';});
  // yield supaya antarmuka dapat menampilkan status sebelum perhitungan sinkron.
- setTimeout(()=>{try{state.result=C.generate(state.panels,state.rules,{external:state.external,attempts:+$('attempts').value,includeSupervisor:$('includeSupervisor').checked});audit();showTab('result');if(state.result.conflicts)pop('error',`${state.result.conflicts} jadwal bentrok, lihat kolom status dan perbaiki. Hasil ini tidak boleh digunakan sebelum bentrok diselesaikan.`);
+ setTimeout(()=>{try{state.result=C.generate(state.panels,state.rules,{external:state.external,attempts:+$('attempts').value,includeSupervisor:$('includeSupervisor').checked});if(state.result.events.some(e=>C.violatesFirstSlot(e)||!!C.studentDateIssue(e,e.date)))throw Error('Gagal mematuhi tanggal minimum atau sesi pertama. Jadwal tidak akan diterbitkan.');audit();showTab('result');if(state.result.conflicts)pop('error',`${state.result.conflicts} jadwal bentrok, lihat kolom status dan perbaiki. Hasil ini tidak boleh digunakan sebelum bentrok diselesaikan.`);
  else if(state.result.unscheduled.length||state.result.requiredCovered<state.result.requiredTotal)pop('warning',`${state.result.events.length} mahasiswa terjadwal tanpa bentrok. ${state.result.unscheduled.length} belum terjadwal. Tanggal wajib terpenuhi ${state.result.requiredCovered}/${state.result.requiredTotal}. Periksa daftar dan catatan di bawah.`);
  else pop('info',`✓ Seluruh ${state.result.events.length} mahasiswa berhasil dijadwalkan tanpa bentrok. ${state.result.requiredCovered}/${state.result.requiredTotal} kewajiban tanggal dosen terpenuhi.`);
  renderResult();}catch(e){console.error(e);alert('Generator gagal: '+e.message);}finally{buttons.forEach((id,i)=>{$(id).disabled=false;$(id).textContent=i?'Buat jadwal sekarang →':'↗ Buat jadwal otomatis';});}},25);
@@ -576,10 +620,12 @@ function renderResult(){const r=state.result;if(!r)return;$('resultToolbar').cla
  $('pendingPanel').before(warnBox);
 }
 function openEditor(id){const e=state.result?.events.find(x=>x.id===id);if(!e)return;state.editing=id;$('modalSubtitle').textContent=e.name+' · '+e.kind+' tahap '+e.stage;$('editDate').value=e.date;
- const p=state.panels.find(x=>x.id===id);const w=C.WINDOWS[p.kind+'|'+p.stage];if(w){$('editDate').min=w[0];$('editDate').max=w[1];}else{$('editDate').min='2026-09-28';$('editDate').max='2026-11-06';}
+ const p=state.panels.find(x=>x.id===id);const w=C.WINDOWS[p.kind+'|'+p.stage];if(w){$('editDate').min=C.studentMinimum(p);$('editDate').max=w[1];}else{$('editDate').min='2026-09-28';$('editDate').max='2026-11-06';}
  $('editRoom').innerHTML=C.ROOMS.map(r=>`<option ${r===e.room?'selected':''}>${r}</option>`).join('');updateEditSessions(e.session);$('editModal').classList.remove('hidden');$('editDate').focus();}
-function updateEditSessions(selected){const date=$('editDate').value,options=C.schedulableSessions(date);$('editSession').innerHTML=options.map(s=>`<option value="${s.no}" ${s.no===+selected?'selected':''}>Sesi ${s.no} · ${s.start}–${s.end}</option>`).join('');$('editSlotNotice').textContent=date==='2026-09-28'?'Sesi 1 (08.00–09.45) tanggal 28 September ditiadakan; tersedia sesi 2, 3, dan 4.':'';}
-function saveEdit(){const e=state.result?.events.find(x=>x.id===state.editing),date=$('editDate').value,s=C.schedulableSessions(date).find(x=>x.no===+$('editSession').value);if(!e||!s){alert('Pilih tanggal dan sesi yang valid.');return;}e.date=date;e.session=s.no;e.start=s.start;e.end=s.end;e.room=$('editRoom').value;$('editModal').classList.add('hidden');audit();const issues=state.result.checks.get(e.id)||[];if(issues.length){pop('error',`Jadwal ${e.name} memiliki ${issues.length} bentrok/pelanggaran aturan. Lihat detail pada kolom status.`);}else pop('info',`Jadwal ${e.name} berhasil diperbarui dan diperiksa: AMAN.`);}
+function updateEditSessions(selected){const date=$('editDate').value,options=C.schedulableSessions(date).filter(s=>C.isExamSlotAllowed(date,s.no));$('editSession').innerHTML=options.map(s=>`<option value="${s.no}" ${s.no===+selected?'selected':''}>Sesi ${s.no} · ${s.start}–${s.end}</option>`).join('');const p=state.panels.find(x=>x.id===state.editing);const issue=p?C.studentDateIssue(p,date):'';$('editSlotNotice').textContent=issue|| (date==='2026-09-28'?'Sesi 1 (08.00–09.45) tanggal 28 September ditiadakan; tersedia sesi 2, 3, dan 4.':'');}
+function saveEdit(){const e=state.result?.events.find(x=>x.id===state.editing),p=state.panels.find(x=>x.id===state.editing),date=$('editDate').value,s=C.schedulableSessions(date).find(x=>x.no===+$('editSession').value);
+ if(!e||!p)return;const issue=C.studentDateIssue(p,date);if(issue){alert('TIDAK BOLEH! '+issue);return;}
+ if(!s||C.violatesFirstSlot({date,session:s?.no,start:s?.start})){alert('TIDAK BOLEH! Jadwal paling awal adalah 28 September 2026 sesi 2, pukul 10.00.');return;}e.date=date;e.session=s.no;e.start=s.start;e.end=s.end;e.room=$('editRoom').value;$('editModal').classList.add('hidden');audit();const issues=state.result.checks.get(e.id)||[];if(issues.length){pop('error',`Jadwal ${e.name} memiliki ${issues.length} bentrok/pelanggaran aturan. Lihat detail pada kolom status.`);}else pop('info',`Jadwal ${e.name} berhasil diperbarui dan diperiksa: AMAN.`);}
 $('absenceForm').addEventListener('submit',addManualAbsence);
 $('exportAbsences').addEventListener('click',()=>{const rows=state.manualAbsences.map(x=>({'Nama Dosen':x.lecturer,'Tanggal':x.date,'Mulai Sesi':x.start,'Sampai Sesi':x.until}));downloadText('aturan-berhalangan-tambahan-2026.csv',C.csvExport(rows,['Nama Dosen','Tanggal','Mulai Sesi','Sampai Sesi']));});
 $('absenceDate').addEventListener('change',()=>{const fri=C.isoDay($('absenceDate').value)===5;for(const id of ['absenceStart','absenceUntil']){const select=$(id),option=select.querySelector('[value="4"]');if(option)option.disabled=fri;if(fri&&select.value==='4')select.value='';}});
@@ -591,9 +637,9 @@ $('ackUnknown').addEventListener('change',()=>diagnose());
 $('aliases').addEventListener('change',()=>{$('ackUnknown').checked=false;invalidate();diagnose();renderStats();});$('applyAliases').addEventListener('click',()=>{$('ackUnknown').checked=false;invalidate();diagnose();alert('Penyamaan nama telah diperbarui. Periksa catatan kualitas data.');});
 ['search','filterDate','filterStatus','filterGroup','filterStage'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',renderResult));
 $('auditBtn').addEventListener('click',()=>{audit();if(state.result)pop(state.result.conflicts?'error':'info',state.result.conflicts?`Ada ${state.result.conflicts} jadwal bentrok. Periksa status setiap baris.`:'✓ Pemeriksaan selesai: tidak ditemukan bentrok penguji atau ruangan pada semua jadwal terdaftar.');});
-$('exportBtn').addEventListener('click',()=>{if(!state.result)return alert('Buat jadwal dahulu.');const rows=C.csvRowsForSchedule(state.result.events,state.result.checks),headers=['Tanggal','Tanggal ISO','Sesi','Waktu','Ruangan','NIM','Mahasiswa','Prodi','Jenis Prodi','Tahap','Judul','Ketua Penguji','Anggota Penguji 1','Anggota Penguji 2','Status','Keterangan Bentrok'];downloadText('jadwal-sidang-skripsi-2026.csv',C.csvExport(rows,headers));});
+$('exportBtn').addEventListener('click',()=>{if(!state.result)return alert('Buat jadwal dahulu.');if(!outputSlotSafe())return;const rows=C.csvRowsForSchedule(state.result.events,state.result.checks),headers=['Tanggal','Tanggal ISO','Sesi','Waktu','Ruangan','NIM','Mahasiswa','Prodi','Jenis Prodi','Tahap','Judul','Ketua Penguji','Anggota Penguji 1','Anggota Penguji 2','Status','Keterangan Bentrok'];downloadText('jadwal-sidang-skripsi-2026.csv',C.csvExport(rows,headers));});
 $('exportPending').addEventListener('click',()=>{const rows=(state.result?.unscheduled||[]).map(x=>({Mahasiswa:x.panel.name,NIM:x.panel.nim,Prodi:x.panel.major,Jenis:x.panel.kind,Tahap:x.panel.stage,Ketua:x.panel.examiners[0],Anggota1:x.panel.examiners[1],Anggota2:x.panel.examiners[2],Alasan:x.reason}));downloadText('belum-terjadwal-2026.csv',C.csvExport(rows,['Mahasiswa','NIM','Prodi','Jenis','Tahap','Ketua','Anggota1','Anggota2','Alasan']));});
-$('printBtn').addEventListener('click',()=>{if(!state.result)return alert('Buat jadwal dahulu.');window.print();});
+$('printBtn').addEventListener('click',()=>{if(!state.result)return alert('Buat jadwal dahulu.');if(!outputSlotSafe())return;window.print();});
 $('editDate').addEventListener('change',()=>updateEditSessions($('editSession').value));$('editSave').addEventListener('click',saveEdit);$('editCancel').addEventListener('click',()=>$('editModal').classList.add('hidden'));$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))$('editModal').classList.add('hidden');});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('editModal').classList.add('hidden');});
 const patchExisting=()=>{const data=state.sources.existing;$('existingStatus').className='tag '+(data?.rows?'ok':'');$('existingStatus').textContent=data?.rows?`${data.rows.length} baris tersedia`:data?.error?'Unggahan gagal':'Belum ada data';$('clearExisting').classList.toggle('hidden',!data?.rows);};
 const observer=new MutationObserver(()=>{patchExisting();});observer.observe($('existingMapping'),{attributes:true,attributeFilter:['class']});
